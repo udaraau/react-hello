@@ -9,7 +9,7 @@ const user = {
 }
 
 const e1 = (<h1> Hello, {getName(user)}</h1>);
-const e2 = (getGreeting(null));
+const e2 = (getGreeting(user));
 
 function getName(user) {
   return user.firstName + " " + user.secondName;
@@ -22,7 +22,13 @@ function getGreeting(user) {
   return <h1> Hello, Stranger </h1>;
 }
 
+
+ReactDOM.render(
+  e1,
+  document.getElementById('root')
+);
+
 ReactDOM.render(
   e2,
-  document.getElementById('root')
+  document.getElementById('root2')
 );
